@@ -1,14 +1,32 @@
 <!--마이페이지 정보 수정-->
+<!--css 따로 빼야 할듯한..  -> ./static/mypage/style.css ..? 괜찮으려나요..-->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지 정보 수정</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ewha Market</title>
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/index.css" />
 </head>
 <body>
+  <!-- 헤더 -->     <!--index.html이랑 똑같이 추가한건데 이상하게 떠요ㅜ-->
+    <header>
+      <div class="logo">
+        <img src="./assets/Market-logo.png" alt="Ewha Market" />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./index.html" class="active">상품 조회</a></li>
+          <li><a href="./reviews/index.html">리뷰 조회</a></li>
+          <li><a href="./reviews/new.html">리뷰 등록</a></li>
+          <li><a href="./products/detail.html">상품 등록</a></li>
+          <li><a href="./mypage/index.html">마이페이지</a></li>
+          <li><a href="./auth/login.html">회원가입/로그인</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <!-- 본문 -->
         <h2>My Page</h2>
         <style>
@@ -28,6 +46,7 @@
           padding: 20px;
         }
       </style>
+      <div class="form-container">
         <form action="/mypage/update-info" method="post">
             <div class="form-group">
                 <label for="id">아이디</label>
@@ -51,12 +70,16 @@
             </div>
           </form>
           <button type="submit" class="btn">수정</button>
+      </div>
       <style>
+        /* form-container이 가운데로 안옴*/
         .form-container {
           display: flex;
           flex-direction: column;
-          gap: 60px;
+          align-items: center;
+          width: 1096px; height: 879px;
           margin: 0 auto;
+          border: 1px solid #ccc;
         }
         .form-group {
           display: flex;
@@ -86,5 +109,8 @@
         }
       </style>
     </main>
+
+    <!-- Footer -->
+    <footer><p>@cloud9</p></footer>
 </body>
 </html>
