@@ -1,1 +1,90 @@
 <!--마이페이지 정보 수정-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 정보 수정</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+    <!-- 본문 -->
+        <h2>My Page</h2>
+        <style>
+          h2 {
+            text-align: left;
+            padding: 20px;
+            color: #00462A;
+            border-bottom: 1px solid;
+          }
+        </style>
+
+    <main class="container">
+      <style>
+        .container {
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+      </style>
+        <form action="/mypage/update-info" method="post">
+            <div class="form-group">
+                <label for="id">아이디</label>
+                <input type="text" id="id" name="id" placeholder="ewha2025" required>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="ewha@ewha.ac.kr" required><br>
+            </div>
+            <div class="form-group">
+                <label for="number">전화번호</label>
+                <input type="number" id="number" name="number" placeholder="010-1234-5678" required><br>
+            </div>
+            <div class="form-group">
+                <label for="passwd">비밀번호</label>
+                <input type="passwd" id="passwd" name="passwd" placeholder="●●●●●●●" required><br>
+            </div>
+            <div class="form-group">
+                <label for="checkpw">비밀번호 확인</label>
+                <input type="checkpw" id="checkpw" name="checkpw" placeholder="●●●●●●●" required><br>
+            </div>
+          </form>
+          <button type="submit" class="btn">수정</button>
+      <style>
+        .form-container {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+          margin: 0 auto;
+        }
+        .form-group {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          width: 630px; height: 64px;
+          gap: 20px;
+          white-space: nowrap; word-break: keep-all;
+        }
+        #id, #email, #number, #passwd, #checkpw {
+          width: 630px; height: 64px;
+          padding: 8px;
+          margin: 8px 0;
+          border-radius: 10px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        .btn {
+          background-color: #34A853;
+          color: #FFFFFF;
+          border: none;
+          border-radius: 300px;
+          padding: 10px 20px;
+          width: 400px; height: 74px;
+          cursor: pointer;
+          text-align: center;
+        }
+      </style>
+    </main>
+</body>
+</html>
