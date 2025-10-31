@@ -1,0 +1,78 @@
+/* 공동 스타일*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  background-color: #ffffff;
+}
+
+main {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 50px;
+  margin-top: 30px;
+}
+
+section {
+  padding: 25px;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #4caf50;
+}
+
+.logo {
+  width: 250px;
+  height: 40px;
+  display: flex;
+}
+
+/* 푸터 */
+footer {
+  display: flex;
+  background-color: #e8f5e9;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+footer p {
+  font-size: 12px;
+  color: #666666;
+}
