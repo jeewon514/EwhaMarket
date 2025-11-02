@@ -63,6 +63,23 @@ header {
   display: flex;
 }
 
+/*기타 요소*/
+.shadow-div {
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 25px;
+}
+
+.submit-btn {
+  background-color: #00462a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 18px 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 /* 푸터 */
 footer {
   display: flex;
