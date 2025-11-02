@@ -1,116 +1,88 @@
-<!--마이페이지 정보 수정-->
-<!--css 따로 빼야 할듯한..  -> ./static/mypage/style.css ..? 괜찮으려나요..-->
+<!--마이페이지-2 정보 수정-->
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ewha Market</title>
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-</head>
-<body>
-  <!-- 헤더 -->     <!--index.html이랑 똑같이 추가한건데 이상하게 떠요ㅜ-->
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/mypage2.css" />
+  </head>
+
+  <body>
+    <!-- 헤더 -->
     <header>
       <div class="logo">
-        <img src="./assets/Market-logo.png" alt="Ewha Market" />
+        <img src="../assets/Market-logo.png" alt="Ewha Market" />
       </div>
       <nav>
         <ul class="nav-menu">
           <li><a href="./index.html" class="active">상품 조회</a></li>
           <li><a href="./reviews/index.html">리뷰 조회</a></li>
           <li><a href="./reviews/new.html">리뷰 등록</a></li>
-          <li><a href="./products/detail.html">상품 등록</a></li>
+          <li><a href="./products/enroll.html">상품 등록</a></li>
           <li><a href="./mypage/index.html">마이페이지</a></li>
           <li><a href="./auth/login.html">회원가입/로그인</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- 본문 -->
-        <h2>My Page</h2>
-        <style>
-          h2 {
-            text-align: left;
-            padding: 20px;
-            color: #00462A;
-            border-bottom: 1px solid;
-          }
-        </style>
-
+    <h2>My Page</h2>
     <main class="container">
-      <style>
-        .container {
-          max-width: 300px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-      </style>
       <div class="form-container">
         <form action="/mypage/update-info" method="post">
+
+          <div class="profile">
+            <div class="profile-image">
+              <i class="user"></i>
+              <img src="../mypage/profile.jpg" alt="프로필 이미지" class="profile-img"/>
+            </div>
+            <div class="username">
+              <input type="text" id="username" value="김이화" class="username-input">
+                <button type="button" class="icon-button">
+                  <i class="fa-solid fa-camera"></i>
+                </button>
+                <button type="button" class="icon-button">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+
             <div class="form-group">
                 <label for="id">아이디</label>
                 <input type="text" id="id" name="id" placeholder="ewha2025" required>
             </div>
             <div class="form-group">
                 <label for="email">이메일</label>
-                <input type="email" id="email" name="email" placeholder="ewha@ewha.ac.kr" required><br>
+                <input type="email" id="email" name="email" placeholder="ewha@ewha.ac.kr" required>
             </div>
             <div class="form-group">
                 <label for="number">전화번호</label>
-                <input type="number" id="number" name="number" placeholder="010-1234-5678" required><br>
+                <input type="tel" id="number" name="number" placeholder="010-1234-5678" required>
             </div>
             <div class="form-group">
-                <label for="passwd">비밀번호</label>
-                <input type="passwd" id="passwd" name="passwd" placeholder="●●●●●●●" required><br>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" placeholder="●●●●●●●" required>
             </div>
             <div class="form-group">
                 <label for="checkpw">비밀번호 확인</label>
-                <input type="checkpw" id="checkpw" name="checkpw" placeholder="●●●●●●●" required><br>
+                <input type="password" id="checkpw" name="checkpw" placeholder="●●●●●●●" required>
             </div>
+
+            <button class="btn" type="submit">수정 완료</button>
           </form>
-          <button type="submit" class="btn">수정</button>
       </div>
-      <style>
-        /* form-container이 가운데로 안옴*/
-        .form-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 1096px; height: 879px;
-          margin: 0 auto;
-          border: 1px solid #ccc;
-        }
-        .form-group {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          width: 630px; height: 64px;
-          gap: 20px;
-          white-space: nowrap; word-break: keep-all;
-        }
-        #id, #email, #number, #passwd, #checkpw {
-          width: 630px; height: 64px;
-          padding: 8px;
-          margin: 8px 0;
-          border-radius: 10px;
-          border: 1px solid #ccc;
-          box-sizing: border-box;
-        }
-        .btn {
-          background-color: #34A853;
-          color: #FFFFFF;
-          border: none;
-          border-radius: 300px;
-          padding: 10px 20px;
-          width: 400px; height: 74px;
-          cursor: pointer;
-          text-align: center;
-        }
-      </style>
     </main>
 
     <!-- Footer -->
     <footer><p>@cloud9</p></footer>
-</body>
+
+    <script>
+      document.getElementById("edit-button").addEventListener("click", () => {
+        window.location.href = "../mypage/index.html";
+      });
+    </script>
+
+  </body>
 </html>
