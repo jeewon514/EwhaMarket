@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ewha Market</title>
     <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-  </head>
+    <link rel="stylesheet" href="./styles/index.css" />    
+    
+    </head>
 
   <body>
     <header>
@@ -27,11 +28,15 @@
 
     <main class="container">
       <section id="product">
-        <div class="filter-bar">
-          <button class="filter">저가순</button>
-          <button class="filter">고가순</button>
-          <button class="filter">인기순</button>
-          <button class="filter">신상품순</button>
+        <div class="list-header">
+            <h2 class="section-title">전체 상품조회</h2>
+            
+            <div class="filter-bar">
+                <button class="filter">저가순</button> 
+                <button class="filter">고가순</button>
+                <button class="filter">인기순</button>
+                <button class="filter">신상품순</button>
+            </div>
         </div>
         
         <div class="product-list">
@@ -46,7 +51,7 @@
             <input type="checkbox" id="like1" class="like-toggle" />
             <label for="like1" class="like-icon"></label>
           </div>
-
+          
           <div class="product-card">
             <div class="image-box">
               <img src="./assets/product-02.png" alt="맨투맨" />
@@ -143,5 +148,16 @@
     </main>
 
     <footer><p>@cloud9</p></footer>
+    
+    <script>
+        const filterButtons = document.querySelectorAll('.filter');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
   </body>
 </html>
