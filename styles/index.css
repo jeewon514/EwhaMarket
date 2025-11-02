@@ -1,3 +1,4 @@
+/* index.css */
 /* ./index.html 스타일 - 시작페이지 */
 .container {
   max-width: 1100px;
@@ -10,7 +11,6 @@
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  margin-bottom: 20px;
 }
 
 .filter {
@@ -20,14 +20,16 @@
   border-radius: 20px;
   cursor: pointer;
   white-space: nowrap; /* 필터 버튼 텍스트 줄바꿈 방지 */
+  transition: all 0.2s ease;
 }
 
+/* 최종 요청 사항 반영: 클릭 시 배경색 #00462A, 글씨색 흰색 */
 .filter.active {
-  /* 이미지 색상에 가깝게 조정 */
-  background-color: #217f39;
-  color: #fff;
-  border-color: #217f39;
+  background-color: #00462A;
+  color: white;
+  border-color: #00462A;
 }
+
 
 /* --- 카드 레이아웃 --- */
 .product-list {
@@ -91,7 +93,6 @@
 .product-card h3 {
   font-size: 16px;
   margin: 8px 0 4px; /* 이미지와의 간격 조정 */
-  /* 요청: 왼쪽 정렬 (text-align: left가 기본이므로 명시적으로 다시 적용) */
   text-align: left; 
 }
 
@@ -99,7 +100,6 @@
   color: #333; /* 가격은 진하게 */
   font-weight: bold;
   font-size: 16px;
-  /* 요청: 왼쪽 정렬 */
   text-align: left;
 }
 
@@ -152,4 +152,19 @@
   font-weight: bold; 
   background: none;
   color: #217f39;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00462A;
+    margin: 0;
 }
